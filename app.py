@@ -5,7 +5,7 @@ from datetime import datetime
 import requests
 
 '''
-# TaxiFareModel front
+# Straight To Hell Taxi Fare Prediction
 '''
 
 url = 'https://taxifare.lewagon.ai/predict'
@@ -75,3 +75,17 @@ if predict_button:
 else:
     m = create_clickable_map(nyc_lat, nyc_lon, zoom_start=12)
     folium_static(m)
+
+
+st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://plus.unsplash.com/premium_photo-1667241634914-3d63759c0789?auto=format&fit=crop&q=80&w=3628&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: center center;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
