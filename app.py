@@ -71,7 +71,7 @@ if predict_button:
     m = create_clickable_map(nyc_lat, nyc_lon, pickup_lat, pickup_long, dropoff_lat, dropoff_long, zoom_start=12)
     folium_static(m)
     prediction = query_api(datetime_str, pickup_long, pickup_lat, dropoff_long, dropoff_lat, passengers)
-    st.markdown(f"## Your fare would be about _${prediction}_")
+    st.markdown(f"## The levy for your passage would be _${prediction}_")
 else:
     m = create_clickable_map(nyc_lat, nyc_lon, zoom_start=12)
     folium_static(m)
